@@ -10,7 +10,9 @@ function typeEffect() {
     }
 }
 
-window.onload = typeEffect;
+window.onload = function () {
+    typeEffect();
+};
 
 
 // Scroll Animation
@@ -25,4 +27,23 @@ window.addEventListener("scroll", () => {
             sec.style.transform = "translateY(0)";
         }
     });
+});
+
+
+// Resume Download Button
+document.addEventListener("DOMContentLoaded", function () {
+    const resumeBtn = document.getElementById("resumeBtn");
+
+    if (resumeBtn) {
+        resumeBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const link = document.createElement("a");
+            link.href = "assets/resume.pdf"; // Change if needed
+            link.download = "Srinith_AIML_Resume.pdf"; // Your file name
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    }
 });
