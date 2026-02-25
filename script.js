@@ -39,8 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
             e.preventDefault();
 
             const link = document.createElement("a");
-            link.href = "assets/resume.pdf"; // Change if needed
-            link.download = "Srinith_AIML_Resume.pdf"; // Your file name
+            link.href = "assets/24011cseai0095_Resume.pdf"; // Change if needed
+            link.download = "24011cseai0095_Resume.pdf"; // Your file name
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
